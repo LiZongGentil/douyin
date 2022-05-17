@@ -1,31 +1,3 @@
-### Go学习
-<br>     
-
-#### 学习资料
-1. [Go 语言上手 - 基础语言](https://juejin.cn/post/7093721879462019102)
-2. [Go语言圣经](https://books.studygolang.com/gopl-zh/)
-3. [青训营完整手册](https://bytedance.feishu.cn/docs/doccnFRB1TXYJPK6yprPETHLXgd#q8ZYps)
-4. [抖音项目-青训营](https://bytedance.feishu.cn/docx/doxcnbgkMy2J0Y3E6ihqrvtHXPg)
-5. [Go语言上手PPT](https://bytedance.feishu.cn/file/boxcnQnHXuDOdzd8CqVid7nQLmg)
-6. [课后项目实践作业](https://juejin.cn/post/7094452391101071367/)
-7. [Go语言工程实践PPT](https://bytedance.feishu.cn/file/boxcnRmlw9MjbtAMBnOW44y8dZd?hash=7cfc75acc80372c08463b622df90a4b5)
-8. [高质量与性能调优PPT](https://bytedance.feishu.cn/file/boxcnqqWtT0xgWAIMGWVs7wM6fd?hash=ab6bfba21a54c52073c7341ecb3ab470)
-
-<br>
-
-#### 实践
-1. 视频Feed流、视频投稿、个人信息：    
-
-&emsp;&emsp;支持所有用户刷抖音，按投稿时间倒叙推出，登录用户可自己拍视频投稿，查看自己的基本信息和投稿列表，注册用户流程简化。
-   - 支持所有用户刷抖音，按投稿时间倒叙推出，单次最多30个视频
-   - 注册登录功能  
-   - 实现登录用户投稿功能
-   - 查看自己基本信息和投稿列表
-
-根据分析，第一步应该设计数据库的表结构：
-   - 首先实现基础功能：
-   - 应包含用户表、视频表
-
 **第一部分已全部完成**   
 *存在问题： 1.只有重启程序才能刷新首页，没有刷新功能 2.封面图没有上传*
    
@@ -44,16 +16,6 @@
 完成点赞和评论功能后，应修改视频初始化，需要读取是否点赞，评论数，以及点赞数
   - 在完成这部分功能时，需要在数据库video表中增加内容，同时点赞和评论需要动态增加用户的喜爱视频表和对应视频的评论内容表，    
   - 表名建议为favorite_用户id，comment_视频id
-
-3. 关注列表，粉丝列表
-- 关注功能
-  - 和点赞功能类似， 点击+关注时，将视频的发布用户加入登录用户的关注表中，没有关注表则动态建立关注表，同时修改用户关注数，和对应用户粉丝数，将登录用户加入到发布视频用户的粉丝表中，没有粉丝表则动态生成粉丝表，修改发布用户粉丝数
-- 关注数和粉丝数加入用户信息中
-  - 数据库的user表需要添加关注数和粉丝数
-- 能够显示关注列表和粉丝列表
-  - 显示关注列表和粉丝列表只需要读数据库对应表就行
-  需要注意的是初始化视频显示时，需判断“+”即关注符号需不需要显示，和点赞功能类似，读取登录用户的关注列表判断是否应该显示“+”
-  - 表名规则同上
 
 <br>
 
